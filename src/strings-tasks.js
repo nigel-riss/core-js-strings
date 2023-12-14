@@ -321,14 +321,13 @@ function countVowels(str) {
  */
 function isPalindrome(str) {
   const reversedStr = str
-    .replace(' ', '')
+    .replace(/[^a-zA-Z]/g, '')
     .split('')
     .reverse()
     .join('')
     .toLowerCase();
-  const normalizedStr = str.replace(' ', '').toLowerCase();
+  const normalizedStr = str.replace(/[^a-zA-Z]/g, '').toLowerCase();
   return reversedStr === normalizedStr;
-  // TODO: update to check for symbols
 }
 
 /**
